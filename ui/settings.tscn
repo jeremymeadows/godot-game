@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cxruob6hcgito"]
 
-[ext_resource type="Script" path="res://ui/settings.gd" id="1_n6y7u"]
+[ext_resource type="Script" uid="uid://c5lbgefw5s4ue" path="res://ui/settings.gd" id="1_n6y7u"]
 [ext_resource type="Texture2D" uid="uid://dc8uya2rf20ff" path="res://assets/backgrounds/yellow.png" id="2_03y18"]
 [ext_resource type="PackedScene" uid="uid://2kcdaud01ee4" path="res://ui/components/ui_button.tscn" id="3_6guce"]
 
@@ -29,7 +29,7 @@ offset_left = 8.0
 offset_top = 8.0
 offset_right = 104.0
 offset_bottom = 44.0
-text = "MAIN_MENU"
+text = "MAIN MENU"
 text_color = Color(1, 1, 1, 1)
 background_color = Color(0.517647, 0.0196078, 1, 1)
 
@@ -63,6 +63,43 @@ item_1/text = "1280x720"
 item_2/text = "1920x1080"
 item_3/text = "2560x1440"
 
+[node name="Music" type="Label" parent="."]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 144.0
+offset_right = 276.0
+offset_bottom = 160.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "MUSIC"
+
+[node name="Mute" type="Label" parent="Music"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 20.0
+offset_right = 22.0
+offset_bottom = 36.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0%"
+
+[node name="Max" type="Label" parent="Music"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 20.0
+offset_right = 222.0
+offset_bottom = 36.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "100%"
+
+[node name="Volume" type="HSlider" parent="Music"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 36.0
+offset_right = 224.0
+offset_bottom = 52.0
+min_value = -20.0
+max_value = 20.0
+
 [connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]
 [connection signal="item_selected" from="Resolution/ItemList" to="." method="_on_item_list_item_selected"]
 [connection signal="tree_exiting" from="Resolution/ItemList" to="." method="_on_item_list_tree_exiting"]
+[connection signal="value_changed" from="Music/Volume" to="." method="_on_volume_value_changed"]

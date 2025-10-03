@@ -15,3 +15,9 @@ func _on_item_list_item_selected(index: int) -> void:
 
 func _on_item_list_tree_exiting() -> void:
 	Global.save_game()
+
+
+func _on_volume_value_changed(value: float) -> void:
+	var music_ndx = AudioServer.get_bus_index("Master")
+	AudioServer.set_bus_mute(music_ndx, value == -20)
+	AudioServer.set_bus_volume_db(music_ndx, value)

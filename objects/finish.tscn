@@ -1,45 +1,45 @@
 [gd_scene load_steps=10 format=3 uid="uid://beqebxg5nk50p"]
 
-[ext_resource type="Script" path="res://objects/finish.gd" id="1_3brcc"]
-[ext_resource type="Texture2D" uid="uid://dljkakfl0ide6" path="res://assets/flag.svg" id="2_7ioav"]
+[ext_resource type="Script" uid="uid://dwgk4hqxpjwoj" path="res://objects/finish.gd" id="1_3brcc"]
+[ext_resource type="Texture2D" uid="uid://bsy0k1gegpkil" path="res://assets/flag.png" id="2_7ioav"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_d801n"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_0mws1"]
 atlas = ExtResource("2_7ioav")
-region = Rect2(0, 0, 32, 32)
+region = Rect2(0, 0, 24, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tu3rn"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_uus7v"]
 atlas = ExtResource("2_7ioav")
-region = Rect2(32, 0, 32, 32)
+region = Rect2(24, 0, 24, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1xnh1"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_332tb"]
 atlas = ExtResource("2_7ioav")
-region = Rect2(64, 0, 32, 32)
+region = Rect2(48, 0, 24, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_64quc"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ytni"]
 atlas = ExtResource("2_7ioav")
-region = Rect2(96, 0, 32, 32)
+region = Rect2(72, 0, 24, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_krebk"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_u7xq1"]
 atlas = ExtResource("2_7ioav")
-region = Rect2(128, 0, 32, 32)
+region = Rect2(96, 0, 24, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_oyyk1"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_d801n")
+"texture": SubResource("AtlasTexture_0mws1")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_tu3rn")
+"texture": SubResource("AtlasTexture_uus7v")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1xnh1")
+"texture": SubResource("AtlasTexture_332tb")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_64quc")
+"texture": SubResource("AtlasTexture_2ytni")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_krebk")
+"texture": SubResource("AtlasTexture_u7xq1")
 }],
 "loop": false,
 "name": &"default",
@@ -55,7 +55,7 @@ collision_mask = 2
 script = ExtResource("1_3brcc")
 
 [node name="Flag" type="AnimatedSprite2D" parent="."]
-position = Vector2(16, -15)
+position = Vector2(12, -15)
 sprite_frames = SubResource("SpriteFrames_oyyk1")
 autoplay = "default"
 

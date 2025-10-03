@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://bpvvc1ntu1v3e"]
 
-[ext_resource type="Script" path="res://ui/components/hud.gd" id="1_wenax"]
+[ext_resource type="Script" uid="uid://b1oxxrdg6gbya" path="res://ui/components/hud.gd" id="1_wenax"]
 [ext_resource type="PackedScene" uid="uid://dtip12kr7p7u6" path="res://ui/components/ui_button_small.tscn" id="2_mwaq8"]
 
 [sub_resource type="Animation" id="Animation_hihwp"]
@@ -108,8 +108,8 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_meegq"]
 _data = {
-"RESET": SubResource("Animation_hihwp"),
-"enlarge": SubResource("Animation_4xfwx")
+&"RESET": SubResource("Animation_hihwp"),
+&"enlarge": SubResource("Animation_4xfwx")
 }
 
 [sub_resource type="InputEventKey" id="InputEventKey_y5vp4"]
@@ -155,7 +155,7 @@ text = "0.000"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Time"]
 libraries = {
-"": SubResource("AnimationLibrary_meegq")
+&"": SubResource("AnimationLibrary_meegq")
 }
 
 [node name="Pause" parent="." instance=ExtResource("2_mwaq8")]

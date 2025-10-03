@@ -1,21 +1,21 @@
 [gd_scene load_steps=7 format=3 uid="uid://81ars1sr5b5j"]
 
-[ext_resource type="Texture2D" uid="uid://ea6ri0xrqgng" path="res://assets/button.png" id="1_fen0d"]
-[ext_resource type="Script" path="res://objects/pressure_button.gd" id="1_ll7lt"]
+[ext_resource type="Texture2D" uid="uid://dlsbqcgxkawpt" path="res://assets/button.png" id="1_fen0d"]
+[ext_resource type="Script" uid="uid://cnat7h1epdwjk" path="res://objects/pressure_button.gd" id="1_ll7lt"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ck5in"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_hdruw"]
 atlas = ExtResource("1_fen0d")
-region = Rect2(0, 0, 16, 16)
+region = Rect2(0, 0, 16, 4)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6aah8"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_a32lj"]
 atlas = ExtResource("1_fen0d")
-region = Rect2(0, 16, 16, 16)
+region = Rect2(16, 0, 16, 4)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qx0gr"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ck5in")
+"texture": SubResource("AtlasTexture_hdruw")
 }],
 "loop": false,
 "name": &"default",
@@ -23,7 +23,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6aah8")
+"texture": SubResource("AtlasTexture_a32lj")
 }],
 "loop": false,
 "name": &"pressed",
@@ -40,7 +40,7 @@ collision_mask = 2
 script = ExtResource("1_ll7lt")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(8, -8)
+position = Vector2(8, -2)
 sprite_frames = SubResource("SpriteFrames_qx0gr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
